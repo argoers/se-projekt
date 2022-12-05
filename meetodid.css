@@ -1,0 +1,12 @@
+.cfopcolumns {
+    display: flex;
+}
+.cfopcolumns div.content {
+    flex: auto;
+}
+.cfopcolumns div.picbar {
+    flex: min-content;
+}
+div.pic img {
+    width: 350px;
+}
