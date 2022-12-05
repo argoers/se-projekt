@@ -57,7 +57,7 @@ body{
     width: 50%;
 }
 
-.row:after {
+  .row:after {
     content: "";
     display: table;
     clear: both;
