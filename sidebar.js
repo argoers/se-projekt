@@ -3,6 +3,7 @@ let sb = document.getElementById('sidebar');
 // nimekiri kõikidest lehekülgedest, mis sidebar'i peal on
 // esimene on lehekülje faili nimi, teine on pealkiri
 let pages = [
+    ["index", "Avaleht"],
     ["ajalugu", "Ajalugu"],
     ["beginners_method", "Algaja meetod"],
     ["meetodid", "Lahendamismeetodid"]
