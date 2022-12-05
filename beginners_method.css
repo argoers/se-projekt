@@ -1,0 +1,27 @@
+h1{
+    color: black;
+    font-size: 50px;
+    font-style: normal;
+    text-align: center;
+}
+
+p{
+    font-family: "Andale Mono", AndaleMono, monospace; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 24px; 
+}
+
+body{
+    color:rgb(0, 0, 0);
+    font-size: 15px;
+    font-style: normal;
+    background-image: url(https://media.istockphoto.com/id/1283615709/photo/old-brown-paper-parchment-background-design-with-distressed-vintage-stains-and-ink-spatter.jpg?b=1&s=170667a&w=0&k=20&c=Y_revxGOF74qhni-1AigoBiEvdU4B-nZDrHtspDW8lw=);
+}
+  .column {
+    float: left;
+    width: 50%;
+}
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
