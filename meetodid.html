@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width">
         <title>Rubiku kuubik - lahendusmeetodid</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="meetodid.css">
     </head>
     <body>
         <p>Rubiku kuubiku lahendamiseks on aastate jooksul välja mõeldud mitmeid erinevaid meetodeid.</p>
@@ -21,7 +22,13 @@
         </div>
         <div id="cfop">
             <h1>CFOP / Fridrichi meetod</h1>
+            <div class=cfopcolumns>
+            <div class=content>
             <p>CFOP (lühend fraasist "Cross, F2L, OLL, PLL", mis on omakorda lühendid fraasidest "First 2 layers", "Orient last layer" ja "Permute last layer") on praeguseks kõige levinum kuubiku lahendamise meetod. Seda kutsutakse ka Fridrichi meetodiks, kuna Jessica Fridrich oli selle üks suurimaid populariseerijaid. See meetod sarnaneb algajate meetodiga selle poolest, et lahendamise faasid on enam-vähem samad. Esimesena tehakse mingile küljele rist (Cross), siis lahendatakse esimese külje nurgad ja keskmise kihi servad paaridena (F2L), siis pööratakse viimasel kihil kõik tükid õiget pidi (OLL) ja viimase sammuna paigutatakse viimase kihi tükid ümber nii, et kogu kuubik oleks lahendatud. See meetod paistab välja selle poolest, et kasutab väga palju algoritme (liigutuste jadasid, mis lahendavad mingi spetsiifilise olukorra), eriti viimases kahes faasis (OLL ja PLL - vastavalt ligikaudu 57 ja 21 algoritmi). Samas tähendab see seda, et suure tõenäosusega on võimalik viimastes faasides kasutada kõige optimaalsemat algoritmi ja seega kuubik võimalikult kiiresti ära lahendada.</p>
+            <p>Eksisteerib ka variant, kus nii OLL kui PLL tehakse kumbki omakorda kahes osas (niinimetatud "2-look OLL" ja "2-look PLL"). Need on aeglasemad kui päris OLL ja PLL, kuna ei kasuta üldjuhul optimaalset liigutuste jada iga olukorra jaoks, kuid see-eest on vaja pähe õppida palju vähem algoritme (10 OLL jaoks ja 6 PLL jaoks). Seega on need head OLL ja PLL õppimisel.</p>
+            <p>CFOP meetodit (ja ka 2-look OLL/PLL'i) saab õppida näiteks <a href="https://jperm.net/3x3/cfop">siit</a>.</p>
+            </div>
+            <div class=picbar>
             <div class=pic><img src="meetodid_cfop1.png">
             <p>1. Rist ehk Cross</p></div>
             <div class=pic><img src="meetodid_cfop2.png">
@@ -30,9 +37,8 @@
             <p>3. Viimase kihi pööramine ehk OLL</p></div>
             <div class=pic><img src="meetodid_cfop4.png">
             <p>4. Viimase kihi permuteerimine ehk PLL</p></div>
-            <br>
-            <p>Eksisteerib ka variant, kus nii OLL kui PLL tehakse kumbki omakorda kahes osas (niinimetatud "2-look OLL" ja "2-look PLL"). Need on aeglasemad kui päris OLL ja PLL, kuna ei kasuta üldjuhul optimaalset liigutuste jada iga olukorra jaoks, kuid see-eest on vaja pähe õppida palju vähem algoritme (10 OLL jaoks ja 6 PLL jaoks). Seega on need head OLL ja PLL õppimisel.</p>
-            <p>CFOP meetodit (ja ka 2-look OLL/PLL'i) saab õppida näiteks <a href="https://jperm.net/3x3/cfop">siit</a>.</p>
+            </div>
+            </div>
         </div>
         <div id="petrus">
             <h1>Petruse meetod</h1>
@@ -51,11 +57,20 @@
         <div id="roux">
             <h1>Roux' meetod</h1>
             <p>Roux' meetodi leiutas Gilles Roux 2003. aastal. Nii nagu Petruse meetod põhineb ka see plokiehitamisel. See meetod on huvitav selle poolest, et kasutab märksa vähem liigutusi kui CFOP ja võib seetõttu kiirem olla. Vaja on ka veidi vähem algoritme. Samuti on see meetod populaarne ühe käega kuubiku lahendamisel.</p>
+            <ol>
+                <li><p>Esimese sammuna luuakse 1x2x3 plokk. See tehakse intuitiivselt.</p></li>
+                <li><p>Edasi luuakse esimese ploki vastasküljele teine 1x2x3 plokk. Jällegi tuleb olla ettevaatlik, et mitte eelmist plokki ära rikkuda. See samm on võimalik teha intuitiivselt, kuid on ka võimalik iga olukorra jaoks algoritm ära õppida.</p></li>
+                <li><p>Nüüdseks on kõik nurgad peale ülemise kihi 4 nurga täielikult lahendatud. Selles sammus lahendatakse alles jäänud 4 nurka ühe korraga. Selle jaoks on 24 erinevat algoritmi.</p></li>
+                <li><p>Viimase asjana jääb lahendada ülemise kihi ja eest vaadates keskmise vertikaalse kihi (selle, mis jääb kahe ehitatud ploki vahele) servad ja keskmised tükid. Seda tehakse kolmes osas: kõigepealt pööratakse kõik servad õiget pidi, siis tehakse alles jäänud servadest kaks ja viimasena kõik alles jäänud servad.</p></li>
+            </ol>
             <p>Täpsem kirjeldus ja nimekiri algoritmidest on kätte saadavad <a href="http://grrroux.free.fr/method/Intro.html">siit</a>.</p>
         </div>
         <div id="zz">
             <h1>ZZ meetod</h1>
-            <p>See meetod leiutati 2003. aastal Ryan Heise poolt, kuid sai populaarseks pärast seda, kui Zbigniew Zborowski selle 2006. aastal uuesti avastas ja seda populariseeris. Tema järgi on meetod ka nime saanud.</p>
+            <p>See meetod leiutati 2003. aastal Ryan Heise poolt, kuid sai populaarseks pärast seda, kui Zbigniew Zborowski selle 2006. aastal uuesti avastas ja seda populariseeris. Tema järgi on meetod ka nime saanud. Praeguseks hõlmab ZZ väga paljusid erinevaid meetodeid, kuid need on üldplaanis kõik sarnased.</p>
+            <p>Selles meetodis alustatakse kõigi servade õiget pidi pööramisega (mitte tingimata õigesse kohta panemisega). Samuti pannakse kaks serva õigesse kohta. Seda sammu kutsutakse EOLine.</p>
+            <p>Edasi ehitatakse jälle 2 plokki, nagu Roux' meetodis. (ZZF2L)</p>
+            <p>Viimase kihi lahendamiseks (LL) on väga palju erinevaid meetodeid.</p>
             <p>Selle meetodi kohta saab rohkem infot näiteks <a href="https://www.speedsolving.com/wiki/index.php/ZZ_method">siit</a>.</p>
         </div>
     </body>
